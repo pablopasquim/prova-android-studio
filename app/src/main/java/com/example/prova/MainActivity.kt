@@ -52,7 +52,7 @@ fun LayoutMain() {
 
             val nome = backStackEntry.arguments?.getString("nome") ?: ""
 
-            val categoria = backStackEntry.arguments?.getString("categorai") ?: ""
+            val categoria = backStackEntry.arguments?.getString("categoria") ?: ""
 
             val preco = backStackEntry.arguments?.getString("preco")?.toDouble() ?: 0.0
 
@@ -156,7 +156,7 @@ fun CadastrarProdutos(navController: NavHostController) {
                 preco.toDouble() < 0 -> {
                     Toast.makeText(context, "O Preço deve ser um positivo!", Toast.LENGTH_SHORT).show()
                 }
-                quantidade.toInt() < 0 -> {
+                quantidade.toInt() < 1 -> {
                     Toast.makeText(context, "A quantidade não pode ser menor que 0!", Toast.LENGTH_SHORT).show()
                 }
 
