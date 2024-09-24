@@ -227,9 +227,11 @@ fun ProdutoItem(produto: Produto, onClick: () -> Unit) {
         modifier = Modifier
             .fillMaxWidth()
             .padding(10.dp)
-            .clickable(onClick = onClick)
+            .clickable(onClick = onClick),
+        verticalAlignment = Alignment.CenterVertically
     ) {
-        Text(text = "${produto.nome} (${produto.quantidade})", fontSize = 20.sp)
+        Text(text = "${produto.nome} (${produto.quantidade})",
+            fontSize = 20.sp)
 
         Spacer(modifier = Modifier.width(8.dp))
 
